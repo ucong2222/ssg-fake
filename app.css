@@ -199,7 +199,7 @@ a {
 }
 
 .menu-bar__menu-1>ul>li{
-  width:25%;
+  flex:1 0 0;
   border-bottom:5px solid;
 }
 
@@ -229,12 +229,12 @@ a {
   left:-10px;
   border-radius:0 0 20px 20px;
   border:5px solid #d9534f;
-  border-top:5px solid rgba(255,181,183);
+  border-top:5px solid rgba(255,170,172);
   z-index:10;
 }
 
 .menu-bar__menu-1>ul>li:hover>ul{
-  background-color:rgba(255,181,183);
+  background-color:rgba(255,170,172);
   color:#d9534f;
   display:block;
 }
@@ -403,6 +403,10 @@ a {
 }
 /*홈바디 끝*/
 
+.toast-ui-codepen-plugin-wrap > iframe {
+  width:100%;
+}
+
 /*최신글 리스트 시작*/
 .home-content__newArticle__title-bar{
   color:#d9534f;
@@ -417,7 +421,7 @@ a {
 .newArticle-list>*>div>div{
   text-align:center;
 }
-.newArticle-list>main>div>div:first-child{
+.newArticle-list>.main>div>div:first-child{
   text-align:left;
 }
 .newArticle-list__cell-title {
@@ -437,16 +441,24 @@ a {
 border-top:solid 4px #d9534f;
   background-color:rgba(217,83,79,0.4);
 }
-.newArticle-list>main>div{
+.newArticle-list>.main>div{
   border-top:solid 2px #d9534f;
 }
 .newArticle-list>*>div>div{
   padding:10px;
 }
-.newArticle-list>main>div:last-child{
+.newArticle-list>.main>div:last-child{
   border-bottom:solid 4px #d9534f;
 }
 /*최신글 리스트 끝*/
+
+/*게시물 검색 시작*/
+.article-search>form{
+  display:flex;
+  justify-content:flex-end;
+  padding:10px;
+}
+/*게시물 검색 끝*/
 
 /*게시물리스트 시작*/
 
@@ -514,17 +526,17 @@ border-top:solid 4px #d9534f;
   right:0;  
 }
 
-.article-list>main>div{
+.article-list>.main>div{
   border-top:solid 2px #d9534f;
 }
-.article-list>main>div:last-child{
+.article-list>.main>div:last-child{
   border-bottom:solid 4px #d9534f;
 }
-.article-list>main>div:hover{
+.article-list>.main>div:hover{
   background-color:rgba(217,83,79,0.2);
 }
 
-.article-list>main .article-list__cell-title{
+.article-list>.main .article-list__cell-title{
   text-align:left;
   padding-left:10px;
 }
@@ -613,6 +625,37 @@ border-top:solid 4px #d9534f;
 
 
 /*상세게시물 끝*/
+
+/* vue 시작 */
+[v-cloak] {
+	display:none;
+}
+/* vue 끝 */ 
+
+/* youtube 동영상 삽입 시작 */
+
+.toast-ui-youtube-plugin-wrap {
+  max-width:500px;
+  margin-left:auto;
+  margin-right:auto;
+  position:relative;
+}
+
+.toast-ui-youtube-plugin-wrap > iframe {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+}
+
+.toast-ui-youtube-plugin-wrap::before {
+  content:"";
+  display:block;
+  padding-top:calc(100% / 16 * 9);
+}
+
+/* youtube 동영상 삽입 끝 */
 
 /*통계 시작*/
 :root{
